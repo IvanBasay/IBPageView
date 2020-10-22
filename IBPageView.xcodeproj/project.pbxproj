@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		D21AB708241E71FA00601512 /* IBPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D21AB706241E71FA00601512 /* IBPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D21AB710241E723100601512 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21AB70E241E723100601512 /* PageView.swift */; };
+		D21AB711241E723100601512 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21AB70F241E723100601512 /* ContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D21AB703241E71FA00601512 /* IBPageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IBPageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21AB706241E71FA00601512 /* IBPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBPageView.h; sourceTree = "<group>"; };
 		D21AB707241E71FA00601512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21AB70E241E723100601512 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		D21AB70F241E723100601512 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 		D21AB705241E71FA00601512 /* IBPageView */ = {
 			isa = PBXGroup;
 			children = (
+				D21AB70F241E723100601512 /* ContainerView.swift */,
+				D21AB70E241E723100601512 /* PageView.swift */,
 				D21AB706241E71FA00601512 /* IBPageView.h */,
 				D21AB707241E71FA00601512 /* Info.plist */,
 			);
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					D21AB702241E71FA00601512 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21AB711241E723100601512 /* ContainerView.swift in Sources */,
+				D21AB710241E723100601512 /* PageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 		D21AB70C241E71FA00601512 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N7AGGR3TBG;
@@ -268,6 +278,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBPageView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,14 +287,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonsaIT.IBPageView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D21AB70D241E71FA00601512 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N7AGGR3TBG;
@@ -292,6 +306,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = IBPageView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,8 +315,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonsaIT.IBPageView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
